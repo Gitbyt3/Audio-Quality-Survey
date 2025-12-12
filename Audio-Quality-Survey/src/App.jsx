@@ -10,17 +10,18 @@ import Landing from './pages/Landing'
 import Adbuild1 from './pages/Adbuild1'
 import Adbuild2 from './pages/Adbuild2'
 import Adbuild3 from './pages/Adbuild3'
-// import Adbuild4 from './pages/Adbuild4'
-// import Adbuild5 from './pages/Adbuild5'
-// import Adbuild6 from './pages/Adbuild6'
+import Adbuild4 from './pages/Adbuild4'
+import Adbuild5 from './pages/Adbuild5'
+import Adbuild6 from './pages/Adbuild6'
 import Faulty1 from './pages/Faulty1'
 import Faulty2 from './pages/Faulty2'
 import Real1 from './pages/Real1'
-// import Real2 from './pages/Real2'
+import Real2 from './pages/Real2'
 import SamC_perf1 from './pages/SamC_perf1'
-// import SamC_perf2 from './pages/SamC_perf2'
-// import SamC1 from './pages/SamC1'
-// import SamC2 from './pages/SamC2'
+import SamC_perf2 from './pages/SamC_perf2'
+import SamC1 from './pages/SamC1'
+import SamC2 from './pages/SamC2'
+import Outro from './pages/Outro'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -30,17 +31,18 @@ const App = () => {
         <Route path='/adbuild1' element={<Adbuild1 />} />
         <Route path='/adbuild2' element={<Adbuild2 />} />
         <Route path='/adbuild3' element={<Adbuild3 />} />
-        {/* <Route path='/adbuild4' element={<Adbuild4 />} />
+        <Route path='/adbuild4' element={<Adbuild4 />} />
         <Route path='/adbuild5' element={<Adbuild5 />} />
-        <Route path='/adbuild6' element={<Adbuild6 />} /> */}
+        <Route path='/adbuild6' element={<Adbuild6 />} />
         <Route path='/faulty1' element={<Faulty1 />} />
         <Route path='/faulty2' element={<Faulty2 />} />
         <Route path='/real1' element={<Real1 />} />
-        {/* <Route path='/real2' element={<Real2 />} /> */}
+        <Route path='/real2' element={<Real2 />} />
         <Route path='/samc_perf1' element={<SamC_perf1 />} />
-        {/* <Route path='/samc_perf2' element={<SamC_perf2 />} />
+        <Route path='/samc_perf2' element={<SamC_perf2 />} />
         <Route path='/samc1' element={<SamC1 />} />
-        <Route path='/samc2' element={<SamC2 />} /> */}
+        <Route path='/samc2' element={<SamC2 />} />
+        <Route path='/outro' element={<Outro />} />
       </>
     )
   );

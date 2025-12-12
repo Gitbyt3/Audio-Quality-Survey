@@ -22,7 +22,8 @@ function PageNavigation({ onNavigate, isLoading = false, nextDisabled = false })
     '/samc_perf2',
     '/samc1',
     '/samc2',
-    '/real2'
+    '/real2',
+    '/outro'
   ];
 
   // Get current page index

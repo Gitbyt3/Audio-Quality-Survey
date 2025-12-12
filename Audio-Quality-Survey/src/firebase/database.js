@@ -1,7 +1,7 @@
 import { db } from './config.js';
 import { ref, push, set, serverTimestamp } from "firebase/database";
 
-export const saveSurveyResponse = async (surveyId, responses, userId = null) => {
+export const saveSurveyResponse = async (surveyId, responses) => {
   try {
     const responsesRef = ref(db, 'surveyResponses');
     const newResponseRef = push(responsesRef);
@@ -9,7 +9,6 @@ export const saveSurveyResponse = async (surveyId, responses, userId = null) => 
     const surveyData = {
       surveyId,
       responses,
-      userId,
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
       metadata: {
