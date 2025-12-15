@@ -28,20 +28,20 @@ const App = () => {
     createRoutesFromElements(
       <>
         <Route path='/' element={<Landing />} />
-        <Route path='/adbuild1' element={<Adbuild1 />} />
-        <Route path='/adbuild2' element={<Adbuild2 />} />
-        <Route path='/adbuild3' element={<Adbuild3 />} />
-        <Route path='/adbuild4' element={<Adbuild4 />} />
-        <Route path='/adbuild5' element={<Adbuild5 />} />
-        <Route path='/adbuild6' element={<Adbuild6 />} />
-        <Route path='/faulty1' element={<Faulty1 />} />
-        <Route path='/faulty2' element={<Faulty2 />} />
-        <Route path='/real1' element={<Real1 />} />
-        <Route path='/real2' element={<Real2 />} />
-        <Route path='/samc_perf1' element={<SamC_perf1 />} />
-        <Route path='/samc_perf2' element={<SamC_perf2 />} />
-        <Route path='/samc1' element={<SamC1 />} />
-        <Route path='/samc2' element={<SamC2 />} />
+        <Route path='/1' element={<Adbuild1 />} />
+        <Route path='/2' element={<Adbuild2 />} />
+        <Route path='/3' element={<Adbuild3 />} />
+        <Route path='/4' element={<Adbuild4 />} />
+        <Route path='/5' element={<Adbuild5 />} />
+        <Route path='/6' element={<Adbuild6 />} />
+        <Route path='/7' element={<Faulty1 />} />
+        <Route path='/8' element={<Faulty2 />} />
+        <Route path='/9' element={<Real1 />} />
+        <Route path='/10' element={<Real2 />} />
+        <Route path='/11' element={<SamC_perf1 />} />
+        <Route path='/12' element={<SamC_perf2 />} />
+        <Route path='/13' element={<SamC1 />} />
+        <Route path='/14' element={<SamC2 />} />
         <Route path='/outro' element={<Outro />} />
       </>
     )

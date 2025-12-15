@@ -17,7 +17,9 @@ const Landing = () => {
 
     return (
         <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h1>AudioStack</h1>
+            
+            <img src="https://platform.audiostack.ai/_next/static/media/LogoHorizontalBlackText.7e315493.png" alt="AudioStack Logo" style={{ maxWidth:'200px' }} />
+
             <h2>Audio Quality Survey</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', maxWidth: '300px', margin: '20px auto' }}>
                 <input type="text" placeholder="Name" value={formData.Name} onChange={(e) => handleSelection('Name', e.target.value)} style={{ padding: '10px', fontSize: '16px' }} />
