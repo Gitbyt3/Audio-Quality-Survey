@@ -45,11 +45,23 @@ function PageNavigation({ onNavigate, isLoading = false, nextDisabled = false })
     }
   }
 
+  const handlePreviousClick = async () => {
+    try {
+      if (onNavigate) {
+        await onNavigate()
+      }
+      navigate(prevPage)
+    }
+    catch (error) {
+      console.error('Navigation failed', error)
+    }
+  }
+
   return (
     <div className="page-navigation">
       {prevPage && (
         <button 
-          onClick={() => navigate(prevPage)}
+          onClick={handlePreviousClick}
           className="nav-button prev-button"
         >
           ← Previous Page

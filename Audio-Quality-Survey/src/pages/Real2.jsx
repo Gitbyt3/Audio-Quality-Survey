@@ -6,7 +6,9 @@ import audio from '../audios/Real2.mp3'
 const Real2 = () => {
     const { surveyData, updateSurveyData } = useSurvey()
 
-    const [ formData, setFormData ] = useState({Score: '', Comment: ''})
+    const initialData = surveyData.Real2 || {Score: '', Comment: ''}
+
+    const [ formData, setFormData ] = useState(initialData)
 
     useEffect(() => {console.log('Survey data:', surveyData), console.log('Form data:', formData)}, [formData])
 

@@ -6,7 +6,9 @@ import audio from '../audios/Adbuild3.mp3'
 const Adbuild3 = () => {
     const { surveyData, updateSurveyData } = useSurvey()
 
-    const [ formData, setFormData ] = useState({Score: '', Comment: ''})
+    const initialData = surveyData.Adbuild3 || {Score: '', Comment: ''}
+
+    const [ formData, setFormData ] = useState(initialData)
 
     useEffect(() => {console.log('Survey data:', surveyData), console.log('Form data:', formData)}, [formData])
 
