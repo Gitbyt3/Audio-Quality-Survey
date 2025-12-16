@@ -9,11 +9,11 @@ function PageNavigation({ onNavigate, isLoading = false, nextDisabled = false })
   // Define your page order
   const pageOrder = [
     '/',
-    '/7',
+    '/2',
     '/11',
     '/9',
     '/1',
-    '/2',
+    '/7',
     '/3',
     '/8',
     '/4',
