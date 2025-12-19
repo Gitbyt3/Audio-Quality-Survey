@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import './nav_button.css';
 import React from 'react'
 
-function PageNavigation({ onNavigate, isLoading = false, nextDisabled = false }) {
+function PageNavigation({ onNavigate, isLoading = false, nextDisabled = false, nextLabel =  'Next Page →' }) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -74,7 +74,7 @@ function PageNavigation({ onNavigate, isLoading = false, nextDisabled = false })
           className="nav-button next-button"
           disabled={isLoading || nextDisabled}
         >
-          {isLoading ? 'Loading...' : 'Next Page →'}
+          {isLoading ? 'Loading...' : nextLabel}
         </button>
       )}
     </div>

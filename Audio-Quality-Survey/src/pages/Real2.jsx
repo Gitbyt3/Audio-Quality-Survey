@@ -10,6 +10,8 @@ const Real2 = () => {
 
     const [ formData, setFormData ] = useState(initialData)
 
+    const [ readyToSubmit, setReadyToSubmit ] = useState(false)
+
     useEffect(() => {console.log('Survey data:', surveyData), console.log('Form data:', formData)}, [formData])
 
     const handleSliderChange = (e) => {
@@ -58,7 +60,25 @@ const Real2 = () => {
                 />
             </div>            
 
-            <PageNavigation onNavigate={() => updateSurveyData('Real2', formData)} nextDisabled={!isFormComplete()} />
+            <div style={{ marginTop: '30px', marginBottom: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <label style={{ fontSize: '18px', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+                    <input 
+                        type="checkbox" 
+                        checked={readyToSubmit}
+                        onChange={(e) => setReadyToSubmit(e.target.checked)}
+                        style={{ 
+                            width: '20px', 
+                            height: '20px', 
+                            marginRight: '10px', 
+                            cursor: 'pointer',
+                            accentColor: '#00fec7ff' 
+                        }} 
+                    />
+                    Answers ready for submission?
+                </label>
+            </div>
+
+            <PageNavigation onNavigate={() => updateSurveyData('Real2', formData)} nextDisabled={!isFormComplete() || !readyToSubmit} nextLabel="Submit" />
         </div>
     )
 }
