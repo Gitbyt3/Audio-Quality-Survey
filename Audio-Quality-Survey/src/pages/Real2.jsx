@@ -6,9 +6,10 @@ import audio from '../audios/Real2.mp3'
 const Real2 = () => {
     const { surveyData, updateSurveyData } = useSurvey()
 
-    const initialData = surveyData.Real2 || {Score: '', Comment: ''}
+    const initialData = {Score: 1, Comment: '', ...surveyData.Real2}
 
     const [ formData, setFormData ] = useState(initialData)
+    const [isTouched, setIsTouched] = useState(!!surveyData.Real2.Score)
 
     const [ readyToSubmit, setReadyToSubmit ] = useState(false)
 
@@ -17,24 +18,25 @@ const Real2 = () => {
     const handleSliderChange = (e) => {
         const value = parseInt(e.target.value, 10)
         setFormData({...formData, Score:value})
+        setIsTouched(true)
     }
 
     const handleSelection = (e) => {
         setFormData({...formData, Comment: e.target.value})}
 
     const isFormComplete = () => {
-        return (formData.Score)}
+        return isTouched}
 
     return (
         <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h1>Audio 14</h1>
+            <h1>Ad 14</h1>
             <audio controls style={{ width: '100%', maxWidth: '600px' }}>
                 <source src={audio} type='audio/mpeg' />
             </audio>
 
             <br/><br/><br/>
 
-            <h2>How would you rate this audio?</h2>
+            <h2>How would you rate this ad?</h2>
             <h3>Current score:</h3>
             <div style={{ fontSize: '50px', fontWeight: 'bold', marginTop: '10px' }}>
                 {formData.Score}
@@ -53,7 +55,7 @@ const Real2 = () => {
             <div style={{ width: '90%', maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
                 <label style={{ fontSize: '18px', fontWeight: 'bold' }}>Comments</label>
                 <textarea
-                    placeholder="Please describe any issues you heard in the audio..."
+                    placeholder="Optional: Descriptions of the ad, reasons for your score, or any other comments"
                     value={formData.Comment}
                     onChange={handleSelection}
                     style={{ width: '100%', height: '120px', padding: '10px', marginTop: '10px', fontSize: '16px', borderRadius: '8px', border: '1px solid #ccc', fontFamily: 'inherit'}}

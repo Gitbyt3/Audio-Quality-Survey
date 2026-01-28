@@ -15,7 +15,7 @@ const Outro = () => {
         const submitData = async () => {
             try {
                 setStatus('saving');
-                const surveyId = 'audio_survey_uk';
+                const surveyId = 'audio_survey_uk_internal';
                 await saveSurveyResponse(surveyId, surveyData);
                 setStatus('success');
                 hasSaved.current = true;

@@ -20,7 +20,7 @@ const Landing = () => {
             
             <img src="https://platform.audiostack.ai/_next/static/media/LogoHorizontalBlackText.7e315493.png" alt="AudioStack Logo" style={{ maxWidth:'200px' }} />
 
-            <h2>Audio Quality Survey</h2>
+            <h2>Ad Quality Survey</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', maxWidth: '300px', margin: '20px auto' }}>
                 <input type="text" placeholder="Name" value={formData.Name} onChange={(e) => handleSelection('Name', e.target.value)} style={{ padding: '10px', fontSize: '16px' }} />
                 <input type="text" placeholder="Department" value={formData.Department} onChange={(e) => handleSelection('Department', e.target.value)} style={{ padding: '10px', fontSize: '16px' }} />

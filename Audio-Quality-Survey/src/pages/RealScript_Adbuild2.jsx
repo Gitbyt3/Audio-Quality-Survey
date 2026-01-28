@@ -1,38 +1,40 @@
 import React, { useState, useEffect } from 'react'
 import PageNavigation from '../components/nav_button'
 import { useSurvey } from '../contexts/SurveyContext'
-import audio from '../audios/SamC1.mp3'
+import audio from '../audios/RealScript_Adbuild2.mp3'
 
-const SamC1 = () => {
+const RealScript_Adbuild2 = () => {
     const { surveyData, updateSurveyData } = useSurvey()
 
-    const initialData = surveyData.SamC1 || {Score: '', Comment: ''}
+    const initialData = {Score: 1, Comment: '', ...surveyData.RealScript_Adbuild2}
 
     const [ formData, setFormData ] = useState(initialData)
+    const [isTouched, setIsTouched] = useState(!!surveyData.RealScript_Adbuild2.Score)
 
     useEffect(() => {console.log('Survey data:', surveyData), console.log('Form data:', formData)}, [formData])
 
     const handleSliderChange = (e) => {
         const value = parseInt(e.target.value, 10)
         setFormData({...formData, Score:value})
+        setIsTouched(true)
     }
 
     const handleSelection = (e) => {
         setFormData({...formData, Comment: e.target.value})}
 
     const isFormComplete = () => {
-        return (formData.Score)}
+        return isTouched}
 
     return (
         <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h1>Audio 12</h1>
+            <h1>Ad 13</h1>
             <audio controls style={{ width: '100%', maxWidth: '600px' }}>
                 <source src={audio} type='audio/mpeg' />
             </audio>
 
             <br/><br/><br/>
 
-            <h2>How would you rate this audio?</h2>
+            <h2>How would you rate this ad?</h2>
             <h3>Current score:</h3>
             <div style={{ fontSize: '50px', fontWeight: 'bold', marginTop: '10px' }}>
                 {formData.Score}
@@ -51,16 +53,16 @@ const SamC1 = () => {
             <div style={{ width: '90%', maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
                 <label style={{ fontSize: '18px', fontWeight: 'bold' }}>Comments</label>
                 <textarea
-                    placeholder="Please describe any issues you heard in the audio..."
+                    placeholder="Optional: Descriptions of the ad, reasons for your score, or any other comments"
                     value={formData.Comment}
                     onChange={handleSelection}
                     style={{ width: '100%', height: '120px', padding: '10px', marginTop: '10px', fontSize: '16px', borderRadius: '8px', border: '1px solid #ccc', fontFamily: 'inherit'}}
                 />
             </div>            
 
-            <PageNavigation onNavigate={() => updateSurveyData('SamC1', formData)} nextDisabled={!isFormComplete()} />
+            <PageNavigation onNavigate={() => updateSurveyData('RealScript_Adbuild2', formData)} nextDisabled={!isFormComplete()} />
         </div>
     )
 }
 
-export default SamC1
+export default RealScript_Adbuild2

@@ -17,8 +17,8 @@ export const SurveyProvider = ({ children }) => {
     Real2: {},
     SamC_perf1: {},
     SamC_perf2: {},
-    SamC1: {},
-    SamC2: {}
+    RealScript_Adbuild1: {},
+    RealScript_Adbuild2: {}
   });
 
   const updateSurveyData = (page, data) => {

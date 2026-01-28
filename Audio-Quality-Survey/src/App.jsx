@@ -19,8 +19,8 @@ import Real1 from './pages/Real1'
 import Real2 from './pages/Real2'
 import SamC_perf1 from './pages/SamC_perf1'
 import SamC_perf2 from './pages/SamC_perf2'
-import SamC1 from './pages/SamC1'
-import SamC2 from './pages/SamC2'
+import RealScript_Adbuild1 from './pages/RealScript_Adbuild1'
+import RealScript_Adbuild2 from './pages/RealScript_Adbuild2'
 import Outro from './pages/Outro'
 
 const App = () => {
@@ -40,8 +40,8 @@ const App = () => {
         <Route path='/10' element={<Real2 />} />
         <Route path='/11' element={<SamC_perf1 />} />
         <Route path='/12' element={<SamC_perf2 />} />
-        <Route path='/13' element={<SamC1 />} />
-        <Route path='/14' element={<SamC2 />} />
+        <Route path='/13' element={<RealScript_Adbuild1 />} />
+        <Route path='/14' element={<RealScript_Adbuild2 />} />
         <Route path='/outro' element={<Outro />} />
       </>
     )
